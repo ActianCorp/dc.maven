@@ -1,2 +1,2 @@
-# dc_mvn_repo
+# DC_Maven
 Maven repository for DataConnect Client SDK Samples project
