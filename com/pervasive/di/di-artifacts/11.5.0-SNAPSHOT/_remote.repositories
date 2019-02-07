@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Feb 07 16:23:01 EST 2019
+di-artifacts-11.5.0-SNAPSHOT-sources.jar>=
+di-artifacts-11.5.0-SNAPSHOT.pom>=
+di-artifacts-11.5.0-SNAPSHOT-javadoc.jar>=
+di-artifacts-11.5.0-SNAPSHOT.jar>=

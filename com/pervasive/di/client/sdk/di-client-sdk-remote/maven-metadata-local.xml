@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-  <groupId>com.pervasive.di</groupId>
-  <artifactId>di-artifacts</artifactId>
+  <groupId>com.pervasive.di.client.sdk</groupId>
+  <artifactId>di-client-sdk-remote</artifactId>
   <versioning>
     <versions>
       <version>11.5.0-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20190207212301</lastUpdated>
+    <lastUpdated>20190207212757</lastUpdated>
   </versioning>
 </metadata>

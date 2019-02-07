@@ -4,8 +4,8 @@
   <artifactId>di-client-sdk</artifactId>
   <versioning>
     <versions>
-      <version>11.4.0-SNAPSHOT</version>
+      <version>11.5.0-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20181107211309</lastUpdated>
+    <lastUpdated>20190207212752</lastUpdated>
   </versioning>
 </metadata>

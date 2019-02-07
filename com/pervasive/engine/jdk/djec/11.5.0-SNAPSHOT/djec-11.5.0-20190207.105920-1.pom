@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.pervasive.cosmos</groupId>
+        <artifactId>cosmos-parent</artifactId>
+        <version>11.5.0-SNAPSHOT</version>
+        <relativePath>../../cosmos_9.parent/pom.xml</relativePath>
+    </parent>
+
+    <groupId>com.pervasive.engine.jdk</groupId>
+    <artifactId>djec</artifactId>
+    <version>11.5.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>PDI :: DJec</name>
+    <url>http://www.pervasive.com</url>
+    <organization>
+        <name>Pervasive Software</name>
+    </organization>
+    <scm>
+        <connection>scm:svn:https://alm.pervasive.com/svn/master/cosmos9.core/trunk/di.artifacts/</connection>
+        <developerConnection>scm:svn:https://alm.pervasive.com/svn/master/cosmos9.core/trunk/di.artifacts/
+        </developerConnection>
+        <url>https://alm.pervasive.com/svn/master/cosmos9.core/trunk/di.artifacts/</url>
+    </scm>
+    <dependencies>
+        <dependency>
+            <groupId>com.pervasive.cosmos</groupId>
+            <artifactId>jcore</artifactId>
+            <version>11.5.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.pervasive.plugin</groupId>
+                <artifactId>maven-pomfixer-plugin</artifactId>
+                <version>1.0.0-2</version>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>fixpom</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <profile>
+            <id>make</id>
+            <activation>
+                <property>
+                    <name>env.DJ_TARGET_REDIST</name>
+                </property>
+            </activation>
+            <properties>
+                <djredist>C\:\\dc.core.dev\\target\\redist</djredist>
+                <jardist>C\:\\dc.core.dev\\target\\redist/bin/jars</jardist>
+                <djthirdpartynoarch>C\:\\dc.core.dev\\target\\nondist</djthirdpartynoarch>
+                <jarnondist>C\:\\dc.core.dev\\target\\nondist/redist</jarnondist>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-antrun-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>publish</id>
+                                <phase>package</phase>
+                                <configuration>
+                                    <tasks>
+                                        <mkdir dir="C\:\\dc.core.dev\\target\\redist/bin/jars" />
+                                        <mkdir dir="C\:\\dc.core.dev\\target\\redist/bin/jars/opt" />
+                                        <copy file="C\:\\dc.core.dev\\cosmos_9.engine.sdk\\djec\\target/djec-11.5.0-SNAPSHOT.jar" tofile="C\:\\dc.core.dev\\target\\redist/bin/jars/djec.jar" overwrite="true" />
+                                        <copy file="C\:\\dc.core.dev\\cosmos_9.engine.sdk\\djec\\target/djec-11.5.0-SNAPSHOT.jar" tofile="C\:\\dc.core.dev\\target\\nondist/redist/djec.jar" overwrite="true" />
+                                    </tasks>
+                                </configuration>
+                                <goals>
+                                    <goal>run</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+</project>
