@@ -16,10 +16,9 @@
     <name>PDI :: Client :: SDK</name>
 
     <modules>
-	<module>sdk</module>
+        <module>sdk</module>
         <module>runtime</module>
         <module>local</module>
         <module>remote</module>
-        <module>samples</module>
     </modules>
 </project>
