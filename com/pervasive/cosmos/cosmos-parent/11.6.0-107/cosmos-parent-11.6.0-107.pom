@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.pervasive.cosmos</groupId>
+    <artifactId>cosmos-parent</artifactId>
+    <version>11.6.0-107</version>
+    <packaging>pom</packaging>
+    <name>Pervasive :: Cosmos :: Parent</name>
+    <url>http://integration.pervasive.com/</url>
+    <description>Actian DataConnect provides cost-effective extraction, transformation and flow
+       of nearly any kind of data between sources throughout the organization--on a continuous,
+       event-driven or scheduled basis in any usage scenario that you might need.</description>
+    <organization>
+        <name>Pervasive Software</name>
+        <url>http://www.pervasive.com</url>
+    </organization>
+    <issueManagement>
+        <system>Jira</system>
+        <url>https://alm.pervasive.com/jira/browse/PDI</url>
+    </issueManagement>
+    <ciManagement>
+        <system>Jenkins</system>
+        <url>https://alm.pervasive.com/jenkins/view/DI10.2.6/</url>
+    </ciManagement>
+    <scm>
+        <connection>scm:svn:https://alm.pervasive.com/svn/master/di.services/trunk/</connection>
+        <developerConnection>scm:svn:https://alm.pervasive.com/svn/master/di.services/trunk/</developerConnection>
+        <url>https://alm.pervasive.com/svn/master/di.services/trunk/</url>
+    </scm>
+
+    <properties>
+        <jackson.version>2.11.0</jackson.version>
+    </properties>
+
+    <build>
+        <defaultGoal>install</defaultGoal>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.3</version>
+                    <configuration>
+                        <encoding>UTF-8</encoding>
+                        <showDeprecation>true</showDeprecation>
+                        <source>1.7</source>
+                        <target>1.7</target>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>2.2.1-di-1</version>
+                    <!-- 
+                    this is a version of the maven-release-plugin with this fix:
+                    http://jira.codehaus.org/browse/MRELEASE-674
+                    -->
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>2.7</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.22.1</version>
+                </plugin>
+           </plugins>
+        </pluginManagement>
+    </build>
+</project>
+
