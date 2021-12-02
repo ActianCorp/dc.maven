@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.pervasive.di.client.sdk</groupId>
+        <artifactId>di-client-sdk-top</artifactId>
+        <version>12.0.0-13</version>
+    </parent>
+    <groupId>com.pervasive.di.client.sdk</groupId>
+    <artifactId>di-client-sdk-local</artifactId>
+    <packaging>pom</packaging>
+    <name>PDI :: Client :: SDK :: Local</name>
+    <url>http://www.pervasive.com</url>
+    <properties>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.pervasive.di.client.sdk</groupId>
+            <artifactId>di-client-sdk</artifactId>
+            <version>${project.version}</version>
+            <scope>runtime</scope>
+            <exclusions>
+                <!-- HTTP and STOMP not used for ConnectionType.LOCAL -->
+                <exclusion>
+                    <groupId>com.pervasive.di.common</groupId>
+                    <artifactId>secure-http</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.germane-software.gozirra</groupId>
+                    <artifactId>gozirra-client</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- Provide jcore to support ConnectionType.LOCAL -->
+        <dependency>
+            <groupId>com.pervasive.cosmos</groupId>
+            <artifactId>jcore</artifactId>
+            <version>${project.version}</version>
+            <scope>runtime</scope>
+        </dependency> 
+    </dependencies>
+    <build>
+        <defaultGoal>install</defaultGoal>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>build-local-not-as-fat-jar</id>
+                        <phase>package</phase>
+                        <configuration>
+                            <descriptors>
+                                <descriptor>src/main/assembly/little-boy.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>build-local-zip</id>
+                        <phase>package</phase>
+                        <configuration>
+                            <descriptors>
+                                <descriptor>src/main/assembly/funny-name.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+

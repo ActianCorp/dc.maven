@@ -1,4 +1,6 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Thu Nov 18 07:55:11 MST 2021
+#Thu Dec 02 11:53:00 EST 2021
+jcore-12.0.0-13.pom>dc_maven_repo=
 jcore-12.0.0-13.pom>pervasive=
 jcore-12.0.0-13.jar>pervasive=
+jcore-12.0.0-13.jar>dc_maven_repo=

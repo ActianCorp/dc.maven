@@ -1,9 +1,9 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Thu Nov 18 07:54:59 MST 2021
-https\://alm.pervasive.com/nexus/content/repositories/thirdparty-snapshot/.error=
-https\://alm.pervasive.com/nexus/content/repositories/thirdparty-all/.lastUpdated=1637247299152
-https\://alm.pervasive.com/nexus/content/repositories/pervasive/.lastUpdated=1637247299436
-https\://alm.pervasive.com/nexus/content/repositories/thirdparty-all/.error=
-https\://alm.pervasive.com/nexus/content/repositories/central/.lastUpdated=1637247299054
-https\://alm.pervasive.com/nexus/content/repositories/central/.error=
-https\://alm.pervasive.com/nexus/content/repositories/thirdparty-snapshot/.lastUpdated=1637247299247
+#Thu Dec 02 11:52:51 EST 2021
+https\://alm.actian.com/nexus/content/repositories/thirdparty-all/.error=
+https\://alm.actian.com/nexus/content/repositories/pervasive/.lastUpdated=1638463971088
+https\://alm.actian.com/nexus/content/repositories/central/.error=
+https\://alm.actian.com/nexus/content/repositories/thirdparty-snapshot/.error=
+https\://alm.actian.com/nexus/content/repositories/thirdparty-snapshot/.lastUpdated=1638463970966
+https\://alm.actian.com/nexus/content/repositories/thirdparty-all/.lastUpdated=1638463970852
+https\://alm.actian.com/nexus/content/repositories/central/.lastUpdated=1638463970738

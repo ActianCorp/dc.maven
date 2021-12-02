@@ -1,5 +1,6 @@
 #NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Thu Nov 18 08:12:02 MST 2021
+#Thu Dec 02 11:53:00 EST 2021
 di-artifacts-12.0.0-13.pom>pervasive=
 di-artifacts-12.0.0-13.jar>pervasive=
-di-artifacts-12.0.0-13-javadoc.jar>pervasive=
+di-artifacts-12.0.0-13.pom>dc_maven_repo=
+di-artifacts-12.0.0-13.jar>dc_maven_repo=

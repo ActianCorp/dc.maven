@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.pervasive.di.common</groupId>
+    <artifactId>commons-parent</artifactId>
+    <!-- TODO Can this hard-coding be avoided without going back to the
+         properties bad place? -->
+    <version>12.0.0-13</version>
+    <relativePath>../parent/pom.xml</relativePath>
+  </parent>
+  <groupId>com.pervasive.di.common</groupId>
+  <artifactId>package-explorers</artifactId>
+  <name>PDI :: Common :: Package Explorers</name>
+  <description>Utilities for exploring our various packages (DJARS, DMSs,
+    Message Components).</description> 
+  <packaging>bundle</packaging>
+  <dependencies>
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>1.4</version>
+    </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.14</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest-all</artifactId>
+      <version>1.3</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-all</artifactId>
+      <version>1.8.5</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <instructions>
+            <Export-Package>
+              com.pervasive.di.common.archive
+              , com.pervasive.di.common.pkg
+            </Export-Package>
+            <Import-Package>*</Import-Package>
+            <Bundle-SymbolicName>package-explorers</Bundle-SymbolicName>
+          </instructions>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>bundle</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>com.pervasive.plugin</groupId>
+        <artifactId>maven-pomfixer-plugin</artifactId>
+        <version>1.0.0-2</version>
+        <executions>
+          <execution>
+            <phase>verify</phase>
+            <goals>
+              <goal>fixpom</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

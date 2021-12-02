@@ -1,0 +1,13 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Dec 02 11:52:49 EST 2021
+https\://repo.maven.apache.org/maven2/.lastUpdated=1638463876424
+https\://alm.actian.com/nexus/content/repositories/thirdparty-all/.error=
+https\://alm.actian.com/nexus/content/repositories/pervasive/.lastUpdated=1638463969782
+https\://raw.github.com/ActianCorp/dc.maven/repository/.error=
+https\://alm.actian.com/nexus/content/repositories/central/.error=
+https\://repo.maven.apache.org/maven2/.error=
+https\://alm.actian.com/nexus/content/repositories/thirdparty-snapshot/.error=
+https\://raw.github.com/ActianCorp/dc.maven/repository/.lastUpdated=1638463876368
+https\://alm.actian.com/nexus/content/repositories/thirdparty-snapshot/.lastUpdated=1638463969355
+https\://alm.actian.com/nexus/content/repositories/thirdparty-all/.lastUpdated=1638463969150
+https\://alm.actian.com/nexus/content/repositories/central/.lastUpdated=1638463968961
